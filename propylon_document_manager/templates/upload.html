@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Upload File</h2>
+<p>Click on the "Choose File" button to upload a file:</p>
+
+<form action="/api/file_versions/" method="post" enctype="multipart/form-data">
+
+  {% csrf_token %}
+  <input type="file" id="myFile" name="file">
+  <input type="text" name="url" placeholder="enter URL">
+  <input type="number" name="version" placeholder="Version Number">
+  <input type="submit">
+</form>
+
+</body>
+</html>
